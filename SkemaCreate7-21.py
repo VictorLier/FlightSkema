@@ -1,6 +1,9 @@
 import numpy as np
 from numpy import random
 oldObjFunc = 40
+Time = 0
+oldTime = 0
+
 
 
 while True:
@@ -140,15 +143,23 @@ while True:
 
     #print(Difbåd)
 
-    ObjFunc = DifMatch     
+    ObjFunc = DifMatch*3 + Difbåd 
 
-    if ObjFunc == 4:
+    if ObjFunc < oldObjFunc:
         BedsteSkema = Skema
-        oldObjfunc = ObjFunc
-        print(DifMatch)
-        print(ObjFunc)
+        oldObjFunc = ObjFunc
+        #print(DifMatch)
+        print(ObjFunc, Time, Difbåd, DifMatch)
+        #print(oldObjFunc)
         np.savetxt("Skema.csv", Skema, fmt="%d", delimiter=",")
         np.savetxt("AlleModAlle.csv", AlleModAlle, fmt="%d", delimiter=",")
         np.savetxt("Både.csv", Både, fmt="%d", delimiter=",")
+    
+    Time = Time + 1
+
+    if Time > oldTime+10000:
+        print(Time)
+        oldTime = Time
+    
     
     
