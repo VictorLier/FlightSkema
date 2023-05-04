@@ -9,7 +9,7 @@ oldTime = 0
 while True:
 
     #Antal Hold
-    HoldN = 21
+    HoldN = 24
 
     #Antal både
     BoatN = np.arange(0,HoldN)
@@ -17,8 +17,8 @@ while True:
     #print(BoatN)
 
     #Antal både i hver sejlads
-    split1 = int(7)
-    split2 = int(14)
+    split1 = int(8)
+    split2 = int(16)
 
 
     #Sejladser
@@ -65,42 +65,56 @@ while True:
         AlleModAlle[Sejlads[0],Sejlads[4]] = AlleModAlle[Sejlads[0],Sejlads[4]] + 1
         AlleModAlle[Sejlads[0],Sejlads[5]] = AlleModAlle[Sejlads[0],Sejlads[5]] + 1
         AlleModAlle[Sejlads[0],Sejlads[6]] = AlleModAlle[Sejlads[0],Sejlads[6]] + 1
+        AlleModAlle[Sejlads[0],Sejlads[7]] = AlleModAlle[Sejlads[0],Sejlads[7]] + 1
         AlleModAlle[Sejlads[1],Sejlads[0]] = AlleModAlle[Sejlads[1],Sejlads[0]] + 1
         AlleModAlle[Sejlads[1],Sejlads[2]] = AlleModAlle[Sejlads[1],Sejlads[2]] + 1
         AlleModAlle[Sejlads[1],Sejlads[3]] = AlleModAlle[Sejlads[1],Sejlads[3]] + 1
         AlleModAlle[Sejlads[1],Sejlads[4]] = AlleModAlle[Sejlads[1],Sejlads[4]] + 1
         AlleModAlle[Sejlads[1],Sejlads[5]] = AlleModAlle[Sejlads[1],Sejlads[5]] + 1
         AlleModAlle[Sejlads[1],Sejlads[6]] = AlleModAlle[Sejlads[1],Sejlads[6]] + 1
+        AlleModAlle[Sejlads[1],Sejlads[7]] = AlleModAlle[Sejlads[1],Sejlads[7]] + 1
         AlleModAlle[Sejlads[2],Sejlads[0]] = AlleModAlle[Sejlads[2],Sejlads[0]] + 1
         AlleModAlle[Sejlads[2],Sejlads[1]] = AlleModAlle[Sejlads[2],Sejlads[1]] + 1
         AlleModAlle[Sejlads[2],Sejlads[3]] = AlleModAlle[Sejlads[2],Sejlads[3]] + 1
         AlleModAlle[Sejlads[2],Sejlads[4]] = AlleModAlle[Sejlads[2],Sejlads[4]] + 1
         AlleModAlle[Sejlads[2],Sejlads[5]] = AlleModAlle[Sejlads[2],Sejlads[5]] + 1
         AlleModAlle[Sejlads[2],Sejlads[6]] = AlleModAlle[Sejlads[2],Sejlads[6]] + 1
+        AlleModAlle[Sejlads[2],Sejlads[7]] = AlleModAlle[Sejlads[2],Sejlads[7]] + 1
         AlleModAlle[Sejlads[3],Sejlads[0]] = AlleModAlle[Sejlads[3],Sejlads[0]] + 1
         AlleModAlle[Sejlads[3],Sejlads[1]] = AlleModAlle[Sejlads[3],Sejlads[1]] + 1
         AlleModAlle[Sejlads[3],Sejlads[2]] = AlleModAlle[Sejlads[3],Sejlads[2]] + 1
         AlleModAlle[Sejlads[3],Sejlads[4]] = AlleModAlle[Sejlads[3],Sejlads[4]] + 1
         AlleModAlle[Sejlads[3],Sejlads[5]] = AlleModAlle[Sejlads[3],Sejlads[5]] + 1
         AlleModAlle[Sejlads[3],Sejlads[6]] = AlleModAlle[Sejlads[3],Sejlads[6]] + 1
+        AlleModAlle[Sejlads[3],Sejlads[7]] = AlleModAlle[Sejlads[3],Sejlads[7]] + 1
         AlleModAlle[Sejlads[4],Sejlads[0]] = AlleModAlle[Sejlads[4],Sejlads[0]] + 1
         AlleModAlle[Sejlads[4],Sejlads[1]] = AlleModAlle[Sejlads[4],Sejlads[1]] + 1
         AlleModAlle[Sejlads[4],Sejlads[2]] = AlleModAlle[Sejlads[4],Sejlads[2]] + 1
         AlleModAlle[Sejlads[4],Sejlads[3]] = AlleModAlle[Sejlads[4],Sejlads[3]] + 1
         AlleModAlle[Sejlads[4],Sejlads[5]] = AlleModAlle[Sejlads[4],Sejlads[5]] + 1
         AlleModAlle[Sejlads[4],Sejlads[6]] = AlleModAlle[Sejlads[4],Sejlads[6]] + 1
+        AlleModAlle[Sejlads[4],Sejlads[7]] = AlleModAlle[Sejlads[4],Sejlads[7]] + 1
         AlleModAlle[Sejlads[5],Sejlads[0]] = AlleModAlle[Sejlads[5],Sejlads[0]] + 1
         AlleModAlle[Sejlads[5],Sejlads[1]] = AlleModAlle[Sejlads[5],Sejlads[1]] + 1
         AlleModAlle[Sejlads[5],Sejlads[2]] = AlleModAlle[Sejlads[5],Sejlads[2]] + 1
         AlleModAlle[Sejlads[5],Sejlads[3]] = AlleModAlle[Sejlads[5],Sejlads[3]] + 1
         AlleModAlle[Sejlads[5],Sejlads[4]] = AlleModAlle[Sejlads[5],Sejlads[4]] + 1
         AlleModAlle[Sejlads[5],Sejlads[6]] = AlleModAlle[Sejlads[5],Sejlads[6]] + 1
+        AlleModAlle[Sejlads[5],Sejlads[7]] = AlleModAlle[Sejlads[5],Sejlads[7]] + 1
         AlleModAlle[Sejlads[6],Sejlads[0]] = AlleModAlle[Sejlads[6],Sejlads[0]] + 1
         AlleModAlle[Sejlads[6],Sejlads[1]] = AlleModAlle[Sejlads[6],Sejlads[1]] + 1
         AlleModAlle[Sejlads[6],Sejlads[2]] = AlleModAlle[Sejlads[6],Sejlads[2]] + 1
         AlleModAlle[Sejlads[6],Sejlads[3]] = AlleModAlle[Sejlads[6],Sejlads[3]] + 1
         AlleModAlle[Sejlads[6],Sejlads[4]] = AlleModAlle[Sejlads[6],Sejlads[4]] + 1
         AlleModAlle[Sejlads[6],Sejlads[5]] = AlleModAlle[Sejlads[6],Sejlads[5]] + 1
+        AlleModAlle[Sejlads[6],Sejlads[7]] = AlleModAlle[Sejlads[6],Sejlads[7]] + 1
+        AlleModAlle[Sejlads[7],Sejlads[0]] = AlleModAlle[Sejlads[7],Sejlads[0]] + 1
+        AlleModAlle[Sejlads[7],Sejlads[1]] = AlleModAlle[Sejlads[7],Sejlads[1]] + 1
+        AlleModAlle[Sejlads[7],Sejlads[2]] = AlleModAlle[Sejlads[7],Sejlads[2]] + 1
+        AlleModAlle[Sejlads[7],Sejlads[3]] = AlleModAlle[Sejlads[7],Sejlads[3]] + 1
+        AlleModAlle[Sejlads[7],Sejlads[4]] = AlleModAlle[Sejlads[7],Sejlads[4]] + 1
+        AlleModAlle[Sejlads[7],Sejlads[5]] = AlleModAlle[Sejlads[7],Sejlads[5]] + 1
+        AlleModAlle[Sejlads[7],Sejlads[6]] = AlleModAlle[Sejlads[7],Sejlads[6]] + 1
 
     #print(AlleModAlle)
 
@@ -122,7 +136,7 @@ while True:
 
 
     #Matrix med hvor mange gange de sejler i hver båd
-    Både = np.zeros((HoldN,7),dtype=int)
+    Både = np.zeros((HoldN,8),dtype=int)
 
     for i in range(Skema.shape[0]):
         Sejlads = Skema[i]
@@ -134,6 +148,7 @@ while True:
         Både[Sejlads[4],4] = Både[Sejlads[4],4] + 1
         Både[Sejlads[5],5] = Både[Sejlads[5],5] + 1
         Både[Sejlads[6],6] = Både[Sejlads[6],6] + 1
+        Både[Sejlads[7],7] = Både[Sejlads[7],7] + 1
 
     #print(Både)
 
@@ -143,7 +158,7 @@ while True:
 
     #print(Difbåd)
 
-    ObjFunc = DifMatch*3 + Difbåd 
+    ObjFunc = DifMatch*2 + Difbåd 
 
     if ObjFunc < oldObjFunc:
         BedsteSkema = Skema
