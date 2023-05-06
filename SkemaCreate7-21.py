@@ -1,26 +1,27 @@
 import numpy as np
 from numpy import random
-oldObjFunc = 40
+oldObjFunc = 100
 Time = 0
 oldTime = 0
+Div = 1
 
+if Div == 1:
+    #Antal Hold
+    HoldN = 21
+    #Antal både i hver sejlads
+    BådeN = 7
 
+elif Div == 2:
+    HoldN = 27
+    BådeN = 9
+
+#Antal både
+BoatN = np.arange(0,HoldN)
+#print(BoatN)
+split1 = int(BådeN)
+split2 = int(BådeN*2)
 
 while True:
-
-    #Antal Hold
-    HoldN = 24
-
-    #Antal både
-    BoatN = np.arange(0,HoldN)
-
-    #print(BoatN)
-
-    #Antal både i hver sejlads
-    split1 = int(8)
-    split2 = int(16)
-
-
     #Sejladser
     np.random.shuffle(BoatN)
     r1 = BoatN[:split1]
@@ -36,7 +37,6 @@ while True:
 
     #Første flight:
     Skema = Flight
-
     #print(Skema)
 
     #Næste 11 flights
@@ -59,62 +59,9 @@ while True:
     for i in range(Skema.shape[0]):
         Sejlads = Skema[i]
         #print(Sejlads)
-        AlleModAlle[Sejlads[0],Sejlads[1]] = AlleModAlle[Sejlads[0],Sejlads[1]] + 1
-        AlleModAlle[Sejlads[0],Sejlads[2]] = AlleModAlle[Sejlads[0],Sejlads[2]] + 1
-        AlleModAlle[Sejlads[0],Sejlads[3]] = AlleModAlle[Sejlads[0],Sejlads[3]] + 1
-        AlleModAlle[Sejlads[0],Sejlads[4]] = AlleModAlle[Sejlads[0],Sejlads[4]] + 1
-        AlleModAlle[Sejlads[0],Sejlads[5]] = AlleModAlle[Sejlads[0],Sejlads[5]] + 1
-        AlleModAlle[Sejlads[0],Sejlads[6]] = AlleModAlle[Sejlads[0],Sejlads[6]] + 1
-        AlleModAlle[Sejlads[0],Sejlads[7]] = AlleModAlle[Sejlads[0],Sejlads[7]] + 1
-        AlleModAlle[Sejlads[1],Sejlads[0]] = AlleModAlle[Sejlads[1],Sejlads[0]] + 1
-        AlleModAlle[Sejlads[1],Sejlads[2]] = AlleModAlle[Sejlads[1],Sejlads[2]] + 1
-        AlleModAlle[Sejlads[1],Sejlads[3]] = AlleModAlle[Sejlads[1],Sejlads[3]] + 1
-        AlleModAlle[Sejlads[1],Sejlads[4]] = AlleModAlle[Sejlads[1],Sejlads[4]] + 1
-        AlleModAlle[Sejlads[1],Sejlads[5]] = AlleModAlle[Sejlads[1],Sejlads[5]] + 1
-        AlleModAlle[Sejlads[1],Sejlads[6]] = AlleModAlle[Sejlads[1],Sejlads[6]] + 1
-        AlleModAlle[Sejlads[1],Sejlads[7]] = AlleModAlle[Sejlads[1],Sejlads[7]] + 1
-        AlleModAlle[Sejlads[2],Sejlads[0]] = AlleModAlle[Sejlads[2],Sejlads[0]] + 1
-        AlleModAlle[Sejlads[2],Sejlads[1]] = AlleModAlle[Sejlads[2],Sejlads[1]] + 1
-        AlleModAlle[Sejlads[2],Sejlads[3]] = AlleModAlle[Sejlads[2],Sejlads[3]] + 1
-        AlleModAlle[Sejlads[2],Sejlads[4]] = AlleModAlle[Sejlads[2],Sejlads[4]] + 1
-        AlleModAlle[Sejlads[2],Sejlads[5]] = AlleModAlle[Sejlads[2],Sejlads[5]] + 1
-        AlleModAlle[Sejlads[2],Sejlads[6]] = AlleModAlle[Sejlads[2],Sejlads[6]] + 1
-        AlleModAlle[Sejlads[2],Sejlads[7]] = AlleModAlle[Sejlads[2],Sejlads[7]] + 1
-        AlleModAlle[Sejlads[3],Sejlads[0]] = AlleModAlle[Sejlads[3],Sejlads[0]] + 1
-        AlleModAlle[Sejlads[3],Sejlads[1]] = AlleModAlle[Sejlads[3],Sejlads[1]] + 1
-        AlleModAlle[Sejlads[3],Sejlads[2]] = AlleModAlle[Sejlads[3],Sejlads[2]] + 1
-        AlleModAlle[Sejlads[3],Sejlads[4]] = AlleModAlle[Sejlads[3],Sejlads[4]] + 1
-        AlleModAlle[Sejlads[3],Sejlads[5]] = AlleModAlle[Sejlads[3],Sejlads[5]] + 1
-        AlleModAlle[Sejlads[3],Sejlads[6]] = AlleModAlle[Sejlads[3],Sejlads[6]] + 1
-        AlleModAlle[Sejlads[3],Sejlads[7]] = AlleModAlle[Sejlads[3],Sejlads[7]] + 1
-        AlleModAlle[Sejlads[4],Sejlads[0]] = AlleModAlle[Sejlads[4],Sejlads[0]] + 1
-        AlleModAlle[Sejlads[4],Sejlads[1]] = AlleModAlle[Sejlads[4],Sejlads[1]] + 1
-        AlleModAlle[Sejlads[4],Sejlads[2]] = AlleModAlle[Sejlads[4],Sejlads[2]] + 1
-        AlleModAlle[Sejlads[4],Sejlads[3]] = AlleModAlle[Sejlads[4],Sejlads[3]] + 1
-        AlleModAlle[Sejlads[4],Sejlads[5]] = AlleModAlle[Sejlads[4],Sejlads[5]] + 1
-        AlleModAlle[Sejlads[4],Sejlads[6]] = AlleModAlle[Sejlads[4],Sejlads[6]] + 1
-        AlleModAlle[Sejlads[4],Sejlads[7]] = AlleModAlle[Sejlads[4],Sejlads[7]] + 1
-        AlleModAlle[Sejlads[5],Sejlads[0]] = AlleModAlle[Sejlads[5],Sejlads[0]] + 1
-        AlleModAlle[Sejlads[5],Sejlads[1]] = AlleModAlle[Sejlads[5],Sejlads[1]] + 1
-        AlleModAlle[Sejlads[5],Sejlads[2]] = AlleModAlle[Sejlads[5],Sejlads[2]] + 1
-        AlleModAlle[Sejlads[5],Sejlads[3]] = AlleModAlle[Sejlads[5],Sejlads[3]] + 1
-        AlleModAlle[Sejlads[5],Sejlads[4]] = AlleModAlle[Sejlads[5],Sejlads[4]] + 1
-        AlleModAlle[Sejlads[5],Sejlads[6]] = AlleModAlle[Sejlads[5],Sejlads[6]] + 1
-        AlleModAlle[Sejlads[5],Sejlads[7]] = AlleModAlle[Sejlads[5],Sejlads[7]] + 1
-        AlleModAlle[Sejlads[6],Sejlads[0]] = AlleModAlle[Sejlads[6],Sejlads[0]] + 1
-        AlleModAlle[Sejlads[6],Sejlads[1]] = AlleModAlle[Sejlads[6],Sejlads[1]] + 1
-        AlleModAlle[Sejlads[6],Sejlads[2]] = AlleModAlle[Sejlads[6],Sejlads[2]] + 1
-        AlleModAlle[Sejlads[6],Sejlads[3]] = AlleModAlle[Sejlads[6],Sejlads[3]] + 1
-        AlleModAlle[Sejlads[6],Sejlads[4]] = AlleModAlle[Sejlads[6],Sejlads[4]] + 1
-        AlleModAlle[Sejlads[6],Sejlads[5]] = AlleModAlle[Sejlads[6],Sejlads[5]] + 1
-        AlleModAlle[Sejlads[6],Sejlads[7]] = AlleModAlle[Sejlads[6],Sejlads[7]] + 1
-        AlleModAlle[Sejlads[7],Sejlads[0]] = AlleModAlle[Sejlads[7],Sejlads[0]] + 1
-        AlleModAlle[Sejlads[7],Sejlads[1]] = AlleModAlle[Sejlads[7],Sejlads[1]] + 1
-        AlleModAlle[Sejlads[7],Sejlads[2]] = AlleModAlle[Sejlads[7],Sejlads[2]] + 1
-        AlleModAlle[Sejlads[7],Sejlads[3]] = AlleModAlle[Sejlads[7],Sejlads[3]] + 1
-        AlleModAlle[Sejlads[7],Sejlads[4]] = AlleModAlle[Sejlads[7],Sejlads[4]] + 1
-        AlleModAlle[Sejlads[7],Sejlads[5]] = AlleModAlle[Sejlads[7],Sejlads[5]] + 1
-        AlleModAlle[Sejlads[7],Sejlads[6]] = AlleModAlle[Sejlads[7],Sejlads[6]] + 1
+        for x in range(BådeN):
+            for y in range(BådeN):
+                AlleModAlle[Sejlads[x],Sejlads[y]] = AlleModAlle[Sejlads[x],Sejlads[y]] + 1
 
     #print(AlleModAlle)
 
@@ -122,10 +69,10 @@ while True:
 
     Samlet = AlleModAlle[0,1:HoldN]
     #print(AlleModAlle[1,0])
-    for i in range(19):
+    for i in range(HoldN-2):
         Samlet = np.append(Samlet, AlleModAlle[i+1,0:i+1],axis=0)
         Samlet = np.append(Samlet, AlleModAlle[i+1,i+2:HoldN],axis=0)
-    Samlet = np.append(Samlet,AlleModAlle[20,0:20],axis=0)
+    Samlet = np.append(Samlet,AlleModAlle[(HoldN-1),0:(HoldN-1)],axis=0)
 
     #print(Samlet)
 
@@ -136,29 +83,28 @@ while True:
 
 
     #Matrix med hvor mange gange de sejler i hver båd
-    Både = np.zeros((HoldN,8),dtype=int)
+    Både = np.zeros((HoldN,BådeN),dtype=int)
 
     for i in range(Skema.shape[0]):
         Sejlads = Skema[i]
         #print(Sejlads)
-        Både[Sejlads[0],0] = Både[Sejlads[0],0] + 1
-        Både[Sejlads[1],1] = Både[Sejlads[1],1] + 1
-        Både[Sejlads[2],2] = Både[Sejlads[2],2] + 1
-        Både[Sejlads[3],3] = Både[Sejlads[3],3] + 1
-        Både[Sejlads[4],4] = Både[Sejlads[4],4] + 1
-        Både[Sejlads[5],5] = Både[Sejlads[5],5] + 1
-        Både[Sejlads[6],6] = Både[Sejlads[6],6] + 1
-        Både[Sejlads[7],7] = Både[Sejlads[7],7] + 1
+        for x in range(BådeN):
+            Både[Sejlads[x],x] = Både[Sejlads[x],x] + 1    
 
     #print(Både)
 
     Difbåd = np.max(Både) - np.min(Både)
 
-
-
     #print(Difbåd)
 
-    ObjFunc = DifMatch*2 + Difbåd 
+    BådeMinN = np.count_nonzero(Både == np.min(Både))
+    BådeMaxN = np.count_nonzero(Både == np.max(Både))
+
+    SamletMinN = np.count_nonzero(Samlet == np.min(Samlet))
+    SamletMaxN = np.count_nonzero(Samlet == np.max(Samlet))
+
+
+    ObjFunc = DifMatch*4 + Difbåd*2 + (BådeMaxN + BådeMinN + SamletMaxN + SamletMinN)*0.1
 
     if ObjFunc < oldObjFunc:
         BedsteSkema = Skema
@@ -166,9 +112,15 @@ while True:
         #print(DifMatch)
         print(ObjFunc, Time, Difbåd, DifMatch)
         #print(oldObjFunc)
-        np.savetxt("Skema.csv", Skema, fmt="%d", delimiter=",")
-        np.savetxt("AlleModAlle.csv", AlleModAlle, fmt="%d", delimiter=",")
-        np.savetxt("Både.csv", Både, fmt="%d", delimiter=",")
+        Skema = Skema + 1
+        if Div == 1:
+            np.savetxt("Skema1.csv", Skema, fmt="%d", delimiter=",")
+            np.savetxt("AlleModAlle1.csv", AlleModAlle, fmt="%d", delimiter=",")
+            np.savetxt("Både1.csv", Både, fmt="%d", delimiter=",")
+        else:
+            np.savetxt("Skema2.csv", Skema, fmt="%d", delimiter=",")
+            np.savetxt("AlleModAlle2.csv", AlleModAlle, fmt="%d", delimiter=",")
+            np.savetxt("Både2.csv", Både, fmt="%d", delimiter=",")
     
     Time = Time + 1
 
