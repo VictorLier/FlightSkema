@@ -10,12 +10,14 @@ elif Div == 2:
     HoldN = 27
     BådeN = 9
 
-List = np.arange(0,HoldN)
-Flights = np.tile(List,(12,1))
+
 
 
 def ObjFun(params):
-    #params = int(params)
+    List = np.arange(0,HoldN)
+    Flights = np.tile(List,(12,1))
+    params = 
+    print(params)
     for i in range(12):
         np.random.seed(params[i])
         np.random.shuffle(Flights[i])
@@ -82,6 +84,9 @@ print(ObjFun([1,2,3,4,5,6,7,8,9,2,3,4]))
 
 
 initial_guess = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-res = minimize(ObjFun, x0=initial_guess)
+
+print(ObjFun(initial_guess))
+
+res = minimize(ObjFun, initial_guess, method="CG")
 
 print("Minimum value:", res.fun)
